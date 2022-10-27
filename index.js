@@ -31,6 +31,7 @@ const manageRecipes = async () => {
     await Recipe.deleteOne({title: "Carrot Cake"})
     console.log("Recipe Deleted")
     // Run your code here, after you have insured that the connection was made
+    dbConnection.disconnect();
   } catch (error) {
     console.log(error);
   }
